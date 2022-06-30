@@ -1,0 +1,109 @@
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Element Slectors */
+li{
+    display: inline-block;
+    margin-left: 25px;
+}
+
+h1{
+   font-size: 30px
+}
+
+p{
+   padding-top: 20px;
+   font-size: 14px;
+   line-height: 20px;
+}
+
+header{
+    height:0px;
+    padding: 0 0 53%;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    background-image: url("/Users/hunterhundley/UT Bootcamp Files/Exploring-Hunter/assets/images/a colorful planet.png");
+    background-size: cover;
+    background-position: center;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 4vw;
+    color: #ffffff;
+    text-align: center;
+ }
+
+ nav{
+    padding-top: 15px;
+    margin-right: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5vw;
+ }
+
+ section {
+    width: 100%;
+    display: inline-block;
+}
+
+section.about {
+   margin-bottom: 20px;
+   padding: 50px;
+   height: auto;
+   font-family: 'Courier New', Courier, monospace;
+   background-color: #88d6f1;
+   color: #000000;
+}
+
+section.work {
+   margin-bottom: 20px;
+   padding: 50px;
+   height: 325px;
+   font-family: 'Courier New', Courier, monospace;
+   background-color: #ffcdaf;
+   color: #000000;
+}
+
+/* Place image on left side of container */
+.float-left {
+   float: left;
+   margin-right: 25px;
+}
+
+/* Place image on right side of container */
+.float-right {
+   float: right;
+   margin-left: 25px;
+}
+.about img{
+   max-height:200px
+}
+
+
+ /* Media Queries */
+ @media screen and (min-width: 1150px) and (min-height:538px){
+    #name{
+        margin-left: 45px;
+        text-align: left;
+        position: absolute;
+        top:400px;
+        left:30px;
+     }
+     #about{
+        position: absolute;
+        top:23%;
+        right:47%;
+     }
+     #contact{
+        position: absolute;
+        top:55%;
+        right:11%;
+     }
+     #work{
+        position: absolute;
+        top:28%;
+        left:12%;
+     }
+}
