@@ -21,6 +21,10 @@ p{
    line-height: 20px;
 }
 
+a{
+   color:#ffffff;
+}
+
 header{
     height:0px;
     padding: 0 0 53%;
@@ -66,6 +70,23 @@ section.work {
    color: #000000;
 }
 
+section.contact {
+   margin-bottom: 20px;
+   padding: 50px;
+   height: 325px;
+   font-family: 'Courier New', Courier, monospace;
+   background-color: #d9fbd7;
+   color: #000000;
+   
+}
+
+footer{
+   font-family: 'Courier New', Courier, monospace;
+   text-align: center;
+   padding: 20px
+}
+
+
 /* Place image on left side of container */
 .float-left {
    float: left;
@@ -80,6 +101,20 @@ section.work {
 .about img{
    max-height:200px
 }
+
+.contact img{
+   max-height:100px;
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact ul{
+   text-align: center;
+   padding-top: 75px;
+   
+}
+
 
 
  /* Media Queries */
