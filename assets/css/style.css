@@ -27,11 +27,11 @@ a{
 
 header{
     height:0px;
-    padding: 0 0 53%;
+    padding: 0 0 55%;
     width: 100%;
     margin-top: 0px;
-    margin-bottom: 20px;
-    background-image: url("/Users/hunterhundley/UT Bootcamp Files/Exploring-Hunter/assets/images/a colorful planet.png");
+    margin-bottom: 2px;
+    background-image: url("../images/a colorful planet.png");
     background-size: cover;
     background-position: center;
     font-family:'Courier New', Courier, monospace;
@@ -48,36 +48,26 @@ header{
  }
 
  section {
+    height:0px;
+    padding: 30px 30px 50%;
     width: 100%;
     display: inline-block;
+    margin-bottom: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #000000;
 }
 
 section.about {
-   margin-bottom: 20px;
-   padding: 50px;
-   height: auto;
-   font-family: 'Courier New', Courier, monospace;
    background-color: #88d6f1;
-   color: #000000;
 }
 
 section.work {
-   margin-bottom: 20px;
-   padding: 50px;
-   height: 325px;
-   font-family: 'Courier New', Courier, monospace;
    background-color: #ffcdaf;
-   color: #000000;
 }
 
 section.contact {
    margin-bottom: 20px;
-   padding: 50px;
-   height: 325px;
-   font-family: 'Courier New', Courier, monospace;
    background-color: #d9fbd7;
-   color: #000000;
-   
 }
 
 footer{
@@ -98,8 +88,11 @@ footer{
    float: right;
    margin-left: 25px;
 }
-.about img{
-   max-height:200px
+.about img {
+   max-height:300px;
+   padding-bottom: 5px;
+   display:block;
+   flex-wrap: wrap;
 }
 
 .contact img{
@@ -114,8 +107,6 @@ footer{
    padding-top: 75px;
    
 }
-
-
 
  /* Media Queries */
  @media screen and (min-width: 1150px) and (min-height:538px){
