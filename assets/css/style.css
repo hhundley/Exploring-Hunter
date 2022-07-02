@@ -12,13 +12,15 @@ li{
 }
 
 h1{
-   font-size: 30px
+   font-size: 30px;
+   font-size: 3vw;
+   padding-top:50px
 }
 
 p{
    padding-top: 20px;
-   font-size: 14px;
-   line-height: 20px;
+   font-size: 28px;
+   font-size:2.25vw;
 }
 
 a{
@@ -48,13 +50,16 @@ header{
  }
 
  section {
-    height:0px;
-    padding: 30px 30px 50%;
+    
     width: 100%;
     display: inline-block;
     margin-bottom: 2px;
     font-family: 'Courier New', Courier, monospace;
     color: #000000;
+    overflow: auto;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right:50px
 }
 
 section.about {
@@ -86,20 +91,26 @@ footer{
 /* Place image on right side of container */
 .float-right {
    float: right;
-   margin-left: 25px;
 }
 .about img {
-   max-height:300px;
-   padding-bottom: 5px;
+   max-width:40%;
+   height:auto;
    display:block;
    flex-wrap: wrap;
+   margin:5px;
+   border:5px solid #ffffff;
 }
 
 .contact img{
-   max-height:100px;
-   display: block;
-  margin-left: auto;
-  margin-right: auto;
+   max-width:20%;
+   height:auto;
+   display:block;
+   flex-wrap: wrap;
+   margin:50px 40% 0 40%
+   }
+
+.contact a{
+   color:black
 }
 
 .contact ul{
@@ -107,6 +118,25 @@ footer{
    padding-top: 75px;
    
 }
+
+.contact li:not(:first-child) {
+   padding-left: 30%;
+}
+
+.row {
+   display: flex;
+   flex-wrap: wrap;
+ }
+ 
+ /* Create two equal columns that sits next to each other */
+ .column {
+   flex: 50%;
+ }
+ 
+ .column img {
+   margin-top: 8px;
+  
+ }
 
  /* Media Queries */
  @media screen and (min-width: 1150px) and (min-height:538px){
@@ -132,4 +162,14 @@ footer{
         top:28%;
         left:12%;
      }
+}
+@media screen and (max-width: 720px){
+   .contact li:not(:first-child) {
+      padding-left: 10%;
+   }
+}
+@media screen and (max-width: 440px){
+   .contact li:not(:first-child) {
+      padding-left: 2%;
+   }
 }
