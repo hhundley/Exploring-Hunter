@@ -18,9 +18,10 @@ h1{
 }
 
 p{
-   padding-top: 20px;
+   padding-top: 16%;
    font-size: 28px;
-   font-size:2.25vw;
+   font-size:1vw;
+   line-height: 3vw;
 }
 
 a{
@@ -37,20 +38,19 @@ header{
     background-size: cover;
     background-position: center;
     font-family:'Courier New', Courier, monospace;
-    font-size: 4vw;
+    font-size: 50px;
     color: #ffffff;
     text-align: center;
  }
 
  nav{
-    padding-top: 15px;
+    padding-top: 25px;
     margin-right: 0px;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5vw;
+    font-size: 15px;
  }
 
  section {
-    
     width: 100%;
     display: inline-block;
     margin-bottom: 2px;
@@ -69,6 +69,48 @@ section.about {
 section.work {
    background-color: #ffcdaf;
 }
+
+.projects-grid{
+   width:100%;
+   padding-top: 30px;
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   grid-template-rows: repeat(2, 18vw);
+   grid-gap: 15px;
+}
+
+.project-img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+/* Project Placement */
+.projects-grid-item-1{
+   grid-column-start: 1;
+   grid-column-end: 4;
+   grid-row-start: 1;
+   grid-row-end: 3;
+}
+.projects-grid-item-2{
+   grid-column-start: 4;
+   grid-column-end: 5;
+   grid-row-start: 1;
+   grid-row-end: 3;
+}
+.projects-grid-item-3{
+   grid-column-start: 5;
+   grid-column-end: 6;
+   grid-row-start: 1;
+   grid-row-end: 2;
+}
+.projects-grid-item-4{
+   grid-column-start: 5;
+   grid-column-end: 6;
+   grid-row-start: 2;
+   grid-row-end: 3;
+}
+
 
 section.contact {
    margin-bottom: 20px;
@@ -139,7 +181,7 @@ footer{
  }
 
  /* Media Queries */
- @media screen and (min-width: 1150px) and (min-height:538px){
+ @media screen and (min-width: 1150px) and (min-height:580px){
     #name{
         margin-left: 45px;
         text-align: left;
