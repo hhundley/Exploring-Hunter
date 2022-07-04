@@ -14,7 +14,8 @@ li{
 h1{
    font-size: 30px;
    font-size: 3vw;
-   padding-top:50px
+   padding-top:50px;
+   font-weight: normal
 }
 
 p{
@@ -26,6 +27,11 @@ p{
 
 a{
    color:#ffffff;
+   text-decoration: none;
+}
+a:hover{
+   text-decoration: underline;
+   color:darkorange
 }
 
 header{
@@ -70,48 +76,6 @@ section.work {
    background-color: #ffcdaf;
 }
 
-.projects-grid{
-   width:100%;
-   padding-top: 30px;
-   display: grid;
-   grid-template-columns: repeat(5, 1fr);
-   grid-template-rows: repeat(2, 18vw);
-   grid-gap: 15px;
-}
-
-.project-img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-}
-
-/* Project Placement */
-.projects-grid-item-1{
-   grid-column-start: 1;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
-}
-.projects-grid-item-2{
-   grid-column-start: 4;
-   grid-column-end: 5;
-   grid-row-start: 1;
-   grid-row-end: 3;
-}
-.projects-grid-item-3{
-   grid-column-start: 5;
-   grid-column-end: 6;
-   grid-row-start: 1;
-   grid-row-end: 2;
-}
-.projects-grid-item-4{
-   grid-column-start: 5;
-   grid-column-end: 6;
-   grid-row-start: 2;
-   grid-row-end: 3;
-}
-
-
 section.contact {
    margin-bottom: 20px;
    background-color: #d9fbd7;
@@ -123,17 +87,18 @@ footer{
    padding: 20px
 }
 
+/* Class Selectors */
 
 /* Place image on left side of container */
-.float-left {
-   float: left;
-   margin-right: 25px;
-}
+   .float-left {
+      float: left;
+      margin-right: 25px;
+   }
 
 /* Place image on right side of container */
-.float-right {
-   float: right;
-}
+   .float-right {
+      float: right;
+   }
 .about img {
    max-width:40%;
    height:auto;
@@ -171,14 +136,91 @@ footer{
  }
  
  /* Create two equal columns that sits next to each other */
- .column {
-   flex: 50%;
- }
+   .column {
+      flex: 50%;
+   }
  
  .column img {
    margin-top: 8px;
   
  }
+
+ .projects-grid{
+   width:100%;
+   padding-top: 30px;
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   grid-template-rows: repeat(2, 18vw);
+   grid-gap: 15px;
+}
+
+.project-img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.overlay {
+   position: relative;
+   bottom: 100.75%;
+   height: 100%;
+   width: 100%;
+   opacity: 0;
+   transition: .5s ;
+   background-color: lightsalmon;
+ }
+
+ /* Project Descriptions */
+ .projects-grid-item-1:hover .overlay {
+   opacity: 1;
+ }
+ .projects-grid-item-2:hover .overlay {
+   opacity: 1;
+ }
+ .projects-grid-item-3:hover .overlay {
+   opacity: 1;
+ }
+ .projects-grid-item-4:hover .overlay {
+   opacity: 1;
+ }
+
+ .project-description {
+   color: white;
+   font-size: 1vw;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   -webkit-transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+   text-align: center;
+ }
+
+/* Project Placement */
+   .projects-grid-item-1{
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 3;
+   }
+   .projects-grid-item-2{
+      grid-column-start: 4;
+      grid-column-end: 5;
+      grid-row-start: 1;
+      grid-row-end: 3;
+   }
+   .projects-grid-item-3{
+      grid-column-start: 5;
+      grid-column-end: 6;
+      grid-row-start: 1;
+      grid-row-end: 2;
+   }
+   .projects-grid-item-4{
+      grid-column-start: 5;
+      grid-column-end: 6;
+      grid-row-start: 2;
+      grid-row-end: 3;
+   }
 
  /* Media Queries */
  @media screen and (min-width: 1150px) and (min-height:580px){
@@ -197,12 +239,12 @@ footer{
      #contact{
         position: absolute;
         top:55%;
-        right:11%;
+        right:12%;
      }
      #work{
         position: absolute;
         top:28%;
-        left:12%;
+        left:13%;
      }
 }
 @media screen and (max-width: 720px){
