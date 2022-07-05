@@ -1,259 +1,284 @@
 /* Universal Selector */
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
+   * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+   }
 
 /* Element Slectors */
-li{
-    display: inline-block;
-    margin-left: 25px;
-}
+   li{
+      display: inline-block;
+      margin-left: 25px;
+   }
 
-h1{
-   font-size: 30px;
-   font-size: 3vw;
-   padding-top:50px;
-   font-weight: normal
-}
+   h1{
+      font-size: 30px;
+      font-size: 3vw;
+      padding-top:50px;
+      font-weight: normal
+   }
 
-p{
-   padding-top: 16%;
-   font-size: 28px;
-   font-size:1vw;
-   line-height: 3vw;
-}
+   p{
+      padding-top: 16%;
+      font-size: 28px;
+      font-size:1vw;
+      line-height: 3vw;
+   }
 
-a{
-   color:#ffffff;
-   text-decoration: none;
-}
-a:hover{
-   text-decoration: underline;
-   color:darkorange
-}
+   a{
+      color:#ffffff;
+      text-decoration: none;
+   }
+   /* Styles links when cursor hovers over */
+   a:hover{
+      text-decoration: underline;
+      color:darkorange
+   }
 
-header{
-    height:0px;
-    padding: 0 0 55%;
-    width: 100%;
-    margin-top: 0px;
-    margin-bottom: 2px;
-    background-image: url("../images/a colorful planet.png");
-    background-size: cover;
-    background-position: center;
-    font-family:'Courier New', Courier, monospace;
-    font-size: 50px;
-    color: #ffffff;
-    text-align: center;
- }
+   /* Header */
+   header{
+      height:0px;
+      padding: 0 0 55%;
+      width: 100%;
+      margin-top: 0px;
+      margin-bottom: 2px;
+      background-image: url("../images/a colorful planet.png");
+      background-size: cover;
+      background-position: center;
+      font-family:'Courier New', Courier, monospace;
+      font-size: 50px;
+      color: #ffffff;
+      text-align: center;
+   }
 
- nav{
-    padding-top: 25px;
-    margin-right: 0px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
- }
+   /* Nav bar for small screens */
+   nav{
+      padding-top: 25px;
+      margin-right: 0px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 15px;
+   }
 
- section {
-    width: 100%;
-    display: inline-block;
-    margin-bottom: 2px;
-    font-family: 'Courier New', Courier, monospace;
-    color: #000000;
-    overflow: auto;
-    padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right:50px
-}
+   /* General styling for all sections */
+   section {
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 2px;
+      font-family: 'Courier New', Courier, monospace;
+      color: #000000;
+      overflow: auto;
+      padding-bottom: 50px;
+      padding-left: 50px;
+      padding-right:50px
+   }
 
-section.about {
-   background-color: #88d6f1;
-}
+   /* Sets background for about section */
+   section.about {
+      background-color: #88d6f1;
+   }
 
-section.work {
-   background-color: #ffcdaf;
-}
+   /* Sets background for work section */
+   section.work {
+      background-color: #ffcdaf;
+   }
 
-section.contact {
-   margin-bottom: 20px;
-   background-color: #d9fbd7;
-}
+   /* Sets background for contact section */
+   section.contact {
+      margin-bottom: 20px;
+      background-color: #d9fbd7;
+   }
 
-footer{
-   font-family: 'Courier New', Courier, monospace;
-   text-align: center;
-   padding: 20px
-}
+   /* Styles footer */
+   footer{
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      padding: 20px
+   }
 
 /* Class Selectors */
 
-/* Place image on left side of container */
-   .float-left {
-      float: left;
-      margin-right: 25px;
+   /* Place image on left side of container */
+      .float-left {
+         float: left;
+         margin-right: 25px;
+      }
+
+   /* Place image on right side of container */
+      .float-right {
+         float: right;
+      }
+
+   /* Format images in about section */
+   .about img {
+      max-width:40%;
+      height:auto;
+      display:block;
+      flex-wrap: wrap;
+      margin:5px;
+      border:5px solid #ffffff;
    }
 
-/* Place image on right side of container */
-   .float-right {
-      float: right;
-   }
-.about img {
-   max-width:40%;
-   height:auto;
-   display:block;
-   flex-wrap: wrap;
-   margin:5px;
-   border:5px solid #ffffff;
-}
+   /* Format image in contact section */
+   .contact img{
+      max-width:20%;
+      height:auto;
+      display:block;
+      flex-wrap: wrap;
+      margin:50px 40% 0 40%
+      }
 
-.contact img{
-   max-width:20%;
-   height:auto;
-   display:block;
-   flex-wrap: wrap;
-   margin:50px 40% 0 40%
+   /* Changes only links in contact section to have black text */
+   .contact a{
+      color:black
    }
 
-.contact a{
-   color:black
-}
+   /* Positions links in contact section */
+   .contact ul{
+      text-align: center;
+      padding-top: 75px;
+      
+   }
 
-.contact ul{
-   text-align: center;
-   padding-top: 75px;
+   /* adds gap length in between links in contact section for better style */
+   .contact li:not(:first-child) {
+      padding-left: 30%;
+   }
+
+   /* creates a row for two columns in about section that wraps when respondong to display changes */
+   .row {
+      display: flex;
+      flex-wrap: wrap;
+   }
    
-}
-
-.contact li:not(:first-child) {
-   padding-left: 30%;
-}
-
-.row {
-   display: flex;
-   flex-wrap: wrap;
- }
- 
- /* Create two equal columns that sits next to each other */
-   .column {
-      flex: 50%;
+   /* Create two equal columns in the about section for text and images*/
+      .column {
+         flex: 50%;
+      }
+   
+    /*sets margin for positioning pictures in column */
+   .column img {
+      margin-top: 8px;
+   
    }
- 
- .column img {
-   margin-top: 8px;
-  
- }
 
- .projects-grid{
-   width:100%;
-   padding-top: 30px;
-   display: grid;
-   grid-template-columns: repeat(5, 1fr);
-   grid-template-rows: repeat(2, 18vw);
-   grid-gap: 15px;
-}
-
-.project-img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-}
-
-.overlay {
-   position: relative;
-   bottom: 100.75%;
-   height: 100%;
-   width: 100%;
-   opacity: 0;
-   transition: .5s ;
-   background-color: lightsalmon;
- }
-
- /* Project Descriptions */
- .projects-grid-item-1:hover .overlay {
-   opacity: 1;
- }
- .projects-grid-item-2:hover .overlay {
-   opacity: 1;
- }
- .projects-grid-item-3:hover .overlay {
-   opacity: 1;
- }
- .projects-grid-item-4:hover .overlay {
-   opacity: 1;
- }
-
- .project-description {
-   color: white;
-   font-size: 1vw;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   -webkit-transform: translate(-50%, -50%);
-   -ms-transform: translate(-50%, -50%);
-   transform: translate(-50%, -50%);
-   text-align: center;
- }
-
-/* Project Placement */
-   .projects-grid-item-1{
-      grid-column-start: 1;
-      grid-column-end: 4;
-      grid-row-start: 1;
-      grid-row-end: 3;
+   /* creates a 2x5 grid for placing project tiles */
+   .projects-grid{
+      width:100%;
+      padding-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 18vw);
+      grid-gap: 15px;
    }
-   .projects-grid-item-2{
-      grid-column-start: 4;
-      grid-column-end: 5;
-      grid-row-start: 1;
-      grid-row-end: 3;
+
+   /* Styles project tiles so that they take up all of the designated grid space */
+   .project-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
    }
-   .projects-grid-item-3{
-      grid-column-start: 5;
-      grid-column-end: 6;
-      grid-row-start: 1;
-      grid-row-end: 2;
+
+   /* styles and positions the overlay and description for various applications */
+   .overlay {
+      position: relative;
+      bottom: 100.75%;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ;
+      background-color: lightsalmon;
    }
-   .projects-grid-item-4{
-      grid-column-start: 5;
-      grid-column-end: 6;
-      grid-row-start: 2;
-      grid-row-end: 3;
+
+   /* Shows project descriptions when application tile is hovered over*/
+   .projects-grid-item-1:hover .overlay {
+      opacity: 1;
    }
+   .projects-grid-item-2:hover .overlay {
+      opacity: 1;
+   }
+   .projects-grid-item-3:hover .overlay {
+      opacity: 1;
+   }
+   .projects-grid-item-4:hover .overlay {
+      opacity: 1;
+   }
+
+   /* styles text in application overlay */
+   .project-description {
+      color: white;
+      font-size: 1vw;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+   }
+
+   /* Formats and positions application tiles in designated positions in grid */
+      .projects-grid-item-1{
+         grid-column-start: 1;
+         grid-column-end: 4;
+         grid-row-start: 1;
+         grid-row-end: 3;
+      }
+      .projects-grid-item-2{
+         grid-column-start: 4;
+         grid-column-end: 5;
+         grid-row-start: 1;
+         grid-row-end: 3;
+      }
+      .projects-grid-item-3{
+         grid-column-start: 5;
+         grid-column-end: 6;
+         grid-row-start: 1;
+         grid-row-end: 2;
+      }
+      .projects-grid-item-4{
+         grid-column-start: 5;
+         grid-column-end: 6;
+         grid-row-start: 2;
+         grid-row-end: 3;
+      }
 
  /* Media Queries */
- @media screen and (min-width: 1150px) and (min-height:580px){
-    #name{
-        margin-left: 45px;
-        text-align: left;
-        position: absolute;
-        top:400px;
-        left:30px;
-     }
-     #about{
-        position: absolute;
-        top:23%;
-        right:47%;
-     }
-     #contact{
-        position: absolute;
-        top:55%;
-        right:12%;
-     }
-     #work{
-        position: absolute;
-        top:28%;
-        left:13%;
-     }
-}
-@media screen and (max-width: 720px){
-   .contact li:not(:first-child) {
-      padding-left: 10%;
+   /* adjusts nav links to fit within planets when screen is large enough */
+   @media screen and (min-width: 1150px) and (min-height:580px){
+      #name{
+         margin-left: 45px;
+         text-align: left;
+         position: absolute;
+         top:400px;
+         left:30px;
+      }
+      #about{
+         position: absolute;
+         top:23%;
+         right:47%;
+      }
+      #contact{
+         position: absolute;
+         top:55%;
+         right:12%;
+      }
+      #work{
+         position: absolute;
+         top:28%;
+         left:13%;
+      }
    }
-}
-@media screen and (max-width: 440px){
-   .contact li:not(:first-child) {
-      padding-left: 2%;
+
+   /* adjusts padding between contact links as screen is shrunk */
+   @media screen and (max-width: 720px){
+      .contact li:not(:first-child) {
+         padding-left: 10%;
+      }
    }
-}
+
+   /* Further adjusts padding between contact links when screen is shrunk */
+   @media screen and (max-width: 440px){
+      .contact li:not(:first-child) {
+         padding-left: 2%;
+      }
+   }
